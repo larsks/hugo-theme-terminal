@@ -93,16 +93,19 @@ You can also choose **one of the 3 possibilities** to install the theme:
 
 ### Install theme as Hugo Module
 
+If this is the first time you're using Hugo Modules in your project, you will have to initialize your own module before you fetch the theme module. That might look like:
+
+```
+hugo mod init [your website/module name]
+```
+
+To install the theme:
+
 ```bash
-# If this is the first time you're using Hugo Modules
-# in your project. You have to initiate your own module before
-# you fetch the theme module.
-#
-# hugo mod init [your website/module name]
 hugo mod get github.com/panr/hugo-theme-terminal/v3
 ```
 
-and in your config file add:
+And in your config file add:
 
 ```toml
 [module]
@@ -112,7 +115,9 @@ and in your config file add:
   path = 'github.com/panr/hugo-theme-terminal/v3'
 ```
 
-Keep in mind that the theme by default won't show up in the `themes` directory. This means that you are using the theme as it was on the repository at the moment you fetched it. Your local `go.sum` file keeps all the references. Read more about Hugo Modules in the [official documentation](https://gohugo.io/hugo-modules/).
+Keep in mind that the theme by default won't show up in the `themes` directory. This means that you are using the theme as it was on the repository at the moment you fetched it. Your local `go.sum` file keeps all the references.
+
+Read more about Hugo Modules in the [official documentation](https://gohugo.io/hugo-modules/).
 
 ### Install theme locally
 
